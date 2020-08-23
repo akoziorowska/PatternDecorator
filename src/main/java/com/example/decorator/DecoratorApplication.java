@@ -17,11 +17,11 @@ public class DecoratorApplication {
         SpringApplication.run(DecoratorApplication.class, args);
 
         Cake whiteCake = new WhiteCake();
-        System.out.println("cena bialego ciastka wynosi"+whiteCake.getPrice() +"a z lodami="+new IceDecorator(whiteCake).getPrice());
+        System.out.println("cena bialego ciastka wynosi "+whiteCake.getPrice() +"a z lodami="+new IceDecorator(whiteCake).getPrice());
         whiteCake = new SugarDecorator(whiteCake);
-        System.out.println("cena bialego ciastka z cukrem="+whiteCake.getPrice());
+        System.out.println("cena bialego ciastka z cukrem= "+whiteCake.getPrice());
         whiteCake=new IceDecorator((whiteCake));
-        System.out.println("cena bialego ciastka z cukrem i lodem="+ whiteCake.getPrice());
+        System.out.println("cena bialego ciastka z cukrem i lodem= "+ whiteCake.getPrice());
 
         Cake brownCake = new BrownCake();
         brownCake = new SugarDecorator(brownCake);
